@@ -103,9 +103,10 @@ def train(args, snapshot_path):
     max_iterations = args.max_iterations
     num_classes = 2
 
-    net = net_factory_3d(net_type=args.model, in_chns=1, class_num=num_classes).cuda()
-    model1 = kaiming_normal_init_weight(net)
-    model2 = xavier_normal_init_weight(net)
+    net1 = net_factory_3d(net_type=args.model, in_chns=1, class_num=num_classes).cuda()
+    net2 = net_factory_3d(net_type=args.model, in_chns=1, class_num=num_classes).cuda()
+    model1 = kaiming_normal_init_weight(net1)
+    model2 = xavier_normal_init_weight(net2)
     model1.train()
     model2.train()
 
@@ -264,7 +265,7 @@ def train(args, snapshot_path):
 
                 writer.add_scalar('info/model2_val_dice_score',
                                   avg_metric2[0, 0], iter_num)
-                writer.add_scalar('info/model1_val_hd95',
+                writer.add_scalar('info/model2_val_hd95',
                                   avg_metric2[0, 1], iter_num)
                 logging.info(
                     'iteration %d : model2_dice_score : %f model2_hd95 : %f' % (
@@ -289,3 +290,32 @@ def train(args, snapshot_path):
             iterator.close()
             break
     writer.close()
+
+
+if __name__ == "__main__":
+    if not args.deterministic:
+        cudnn.benchmark = True
+        cudnn.deterministic = False
+    else:
+        cudnn.benchmark = False
+        cudnn.deterministic = True
+
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
+    torch.cuda.manual_seed(args.seed)
+
+    snapshot_path = "../model/{}_{}/{}".format(
+        args.exp, args.labeled_num, args.model)
+    if not os.path.exists(snapshot_path):
+        os.makedirs(snapshot_path)
+    if os.path.exists(snapshot_path + '/code'):
+        shutil.rmtree(snapshot_path + '/code')
+    shutil.copytree('.', snapshot_path + '/code',
+                    shutil.ignore_patterns(['.git', '__pycache__']))
+
+    logging.basicConfig(filename=snapshot_path+"/log.txt", level=logging.INFO,
+                        format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
+    logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+    logging.info(str(args))
+    train(args, snapshot_path)
