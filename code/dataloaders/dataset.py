@@ -136,6 +136,22 @@ def iterate_eternally(indices):
     return itertools.chain.from_iterable(infinite_shuffles())
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def grouper(iterable, n):
     "Collect data into fixed-length chunks or blocks"
     # grouper('ABCDEFG', 3) --> ABC DEF"

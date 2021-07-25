@@ -30,16 +30,16 @@ from val_3D import test_all_case
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root_path', type=str,
-                    default='../data/BraTS2019', help='Name of Experiment')
+                    default='../data/COVID-19', help='Name of Experiment')
 parser.add_argument('--exp', type=str,
-                    default='BraTs2019_Mean_Teacher', help='experiment_name')
+                    default='COVID-19_Mean_Teacher', help='experiment_name')
 parser.add_argument('--model', type=str,
                     default='unet_3D', help='model_name')
 parser.add_argument('--max_iterations', type=int,
                     default=30000, help='maximum epoch number to train')
 parser.add_argument('--batch_size', type=int, default=4,
                     help='batch_size per gpu')
-parser.add_argument('--deterministic', type=int,  default=1,
+parser.add_argument('--deterministic', type=int,  default=0,
                     help='whether use deterministic training')
 parser.add_argument('--base_lr', type=float,  default=0.01,
                     help='segmentation network learning rate')
