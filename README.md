@@ -2,7 +2,7 @@
 
 * Recently, semi-supervised image segmentation has become a hot topic in medical image computing, unfortunately, there are only a few open-source codes and datasets, since the privacy policy and others. For easy evaluation and fair comparison, we are trying to build a semi-supervised medical image segmentation benchmark to boost the semi-supervised learning research in the medical image computing community. If you are interested, you can push your implementations or ideas to this repository at any time.  
 
-* This project was originally developed for our previous works ([DTC](https://arxiv.org/abs/2009.04448) and [URPC](https://arxiv.org/pdf/2012.07042.pdf)), if you find it's useful for your research, please consider to cite the followings:
+* This project was originally developed for our previous works ([DTC](https://arxiv.org/abs/2009.04448) and [URPC](https://arxiv.org/pdf/2012.07042.pdf)), if you find it's useful for your research, please cite the followings:
 
 		@article{luo2021urpc,
 		  title={Efficient Semi-supervised  Gross Target Volume of Nasopharyngeal Carcinoma Segmentation via Uncertainty Rectified Pyramid Consistency},
@@ -18,7 +18,7 @@
 		}
 		@misc{ssl4mis2020,
 		  title={{SSL4MIS}},
-		  author={Luo, Xiangde},
+		  author={Luo, Xiangde and Chen, Jieneng and Song, Tao and  Wang, Guotai},
 		  howpublished={\url{https://github.com/HiLab-git/SSL4MIS}},
 		  year={2020}
 		}
@@ -27,6 +27,12 @@
 
 |Date|The First and Last Authors|Title|Code|Reference|
 |---|---|---|---|---|
+|2021-08|H. Peiris and M. Harandi|Duo-SegNet: Adversarial Dual-Views for Semi-Supervised Medical Image Segmentation|[Code](https://github.com/himashi92/Duo-SegNet)|[ArXiv](https://arxiv.org/pdf/2108.11154.pdf)|
+|2021-08|J. Sun and Y. Kong|Semi-Supervised Medical Image Semantic Segmentation with Multi-scale Graph Cut Loss|None|[ICIP2021](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9506098)|
+|2021-08|X. Shen and J. Lu|PoissonSeg: Semi-Supervised Few-Shot Medical Image Segmentation via Poisson Learning|None|[ArXiv](https://arxiv.org/pdf/2108.11694.pdf)|
+|2021-08|C. You and J. Duncan|SimCVD: Simple Contrastive Voxel-Wise Representation Distillation for Semi-Supervised Medical Image Segmentation|None|[Arxiv](https://arxiv.org/pdf/2108.06227.pdf)|
+|2021-08|C. Li and P. Heng|Self-Ensembling Co-Training Framework for Semi-supervised COVID-19 CT Segmentation|None|[JBHI2021](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9511146)|
+|2021-08|H. Yang and P. H. N. With|Medical Instrument Segmentation in 3D US by Hybrid Constrained Semi-Supervised Learning|None|[JBHI2021](https://arxiv.org/pdf/2107.14476.pdf)|
 |2021-07|W. Ding and H. Hawash|RCTE: A Reliable and Consistent Temporal-ensembling Framework for Semi-supervised Segmentation of COVID-19 Lesions|None|[Information Fusion2021](https://www.sciencedirect.com/science/article/pii/S0020025521007490)|
 |2021-06|X. Liu and S. A. Tsaftaris|Semi-supervised Meta-learning with Disentanglement for Domain-generalised Medical Image Segmentation|[Code](https://github.com/vios-s/DGNet)|[MICCAI2021](https://arxiv.org/pdf/2106.13292.pdf)|
 |2021-06|P. Pandey and Mausam|Contrastive Semi-Supervised Learning for 2D Medical Image Segmentation|None|[MICCAI2021](https://arxiv.org/pdf/2106.06801.pdf)|
@@ -92,6 +98,7 @@
 |2019-10|G. Bortsova and M. Bruijne|Semi-Supervised Medical Image Segmentation via Learning Consistency under Transformations|None|[MICCAI2019](https://arxiv.org/pdf/1911.01218.pdf)|
 |2019-10|Y. He and S. Li|DPA-DenseBiasNet: Semi-supervised 3D Fine Renal Artery Segmentation with Dense Biased Network and Deep Priori Anatomy|None|[MICCAI2019](https://link.springer.com/chapter/10.1007/978-3-030-32226-7_16)|
 |2019-10|H. Zheng and X. Han|Semi-supervised Segmentation of Liver Using Adversarial Learning with Deep Atlas Prior|None|[MICCAI2019](https://link.springer.com/chapter/10.1007/978-3-030-32226-7_17)|
+|2019-10|P. Ganayea and H. Cattin|Removing Segmentation Inconsistencies with Semi-Supervised Non-Adjacency Constraint|[Code](https://github.com/trypag/NonAdjLoss)|[MedIA2019](https://www.sciencedirect.com/science/article/abs/pii/S1361841519300866)|
 |2019-10|Y. Zhao and C. Liu|Multi-view Semi-supervised 3D Whole Brain Segmentation with a Self-ensemble Network|None|[MICCAI2019](https://link.springer.com/chapter/10.1007/978-3-030-32248-9_29)|
 |2019-10|H. Kervade and I. Ayed|Curriculum semi-supervised segmentation|None|[MICCAI2019](https://arxiv.org/pdf/1904.05236.pdf)|
 |2019-10|S. Chen and M. Bruijne|Multi-task Attention-based Semi-supervised Learning for Medical Image Segmentation|None|[MICCAI2019](https://arxiv.org/pdf/1907.12303.pdf)|
